@@ -6,7 +6,7 @@
 #    By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/28 19:11:58 by matoledo          #+#    #+#              #
-#    Updated: 2026/01/29 14:22:45 by matoledo         ###   ########.fr        #
+#    Updated: 2026/02/04 16:36:26 by matoledo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = PhoneBook
 
-SRCS= PhoneBook.cpp
+SRCS= PhoneBook.cpp main.cpp Contact.cpp
 
 OBJS = $(SRCS:.c=.o)
 
