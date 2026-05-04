@@ -6,7 +6,7 @@
 /*   By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:30:12 by matoledo          #+#    #+#             */
-/*   Updated: 2026/04/28 20:56:09 by matoledo         ###   ########.fr       */
+/*   Updated: 2026/05/04 13:38:58 by matoledo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ void PhoneBook::SearchContact()
     while (1)
     {
         std::cout << "Elige el ínice que quieres ver\n";
-        if (std::cin >> index && index <= (size - 1))
+        if (std::cin >> index && index <= (size - 1) && index >= 0)
             break ;
-        std::cout << "Respuesta incorrecta\n";
+        std::cout << "No está guardado ese contacto\n";
         std::cin.clear();
         std::cin.ignore(10000, '\n');
     }
