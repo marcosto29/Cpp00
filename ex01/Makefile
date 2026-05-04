@@ -6,14 +6,14 @@
 #    By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/28 19:11:58 by matoledo          #+#    #+#              #
-#    Updated: 2026/02/04 16:36:26 by matoledo         ###   ########.fr        #
+#    Updated: 2026/04/28 20:58:59 by matoledo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = g++
 
 #-Wall -Wextra -Werror
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = PhoneBook
 

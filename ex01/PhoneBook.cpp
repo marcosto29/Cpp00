@@ -6,7 +6,7 @@
 /*   By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:30:12 by matoledo          #+#    #+#             */
-/*   Updated: 2026/02/04 16:35:15 by matoledo         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:56:09 by matoledo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,12 @@ void PhoneBook::SearchContact()
 {
     int index;
 
-    DisplayAllContacts();
+    if (DisplayAllContacts() == 1)
+        return ;
     while (1)
     {
         std::cout << "Elige el ínice que quieres ver\n";
-        if (std::cin >> index)
+        if (std::cin >> index && index <= (size - 1))
             break ;
         std::cout << "Respuesta incorrecta\n";
         std::cin.clear();
@@ -62,6 +63,7 @@ void PhoneBook::DisplayContact(int index)
                 << "last name: " << contacts[index].lastName << "\n"
                 << "nickname: " << contacts[index].nickname << "\n"
                 << "darkest secret: " << contacts[index].darkestSecret << "\n";
+	std::cin.ignore(10000, '\n');
 }
 
 std::string PhoneBook::WriteWord(std::string string)
@@ -71,11 +73,16 @@ std::string PhoneBook::WriteWord(std::string string)
     return (string.substr(0, 9) + '.');
 }
 
-void PhoneBook::DisplayAllContacts()
+int PhoneBook::DisplayAllContacts()
 {
     int	i;
 
     i = 0;
+    if (size <= 0)
+    {
+        std::cout << "No tiene ningún contacto en el teléfono\n";
+        return (1);
+    }
     std::cout << std::setw(10) << WriteWord("index") << " | "
                 << std::setw(10) << WriteWord("first name") << " | "
                 << std::setw(10) << WriteWord("last name") << " | "
@@ -88,4 +95,5 @@ void PhoneBook::DisplayAllContacts()
                     << std::setw(10) << WriteWord(contacts[i].nickname) << " |\n";
         i++;
     }
+    return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 19:35:20 by matoledo          #+#    #+#             */
-/*   Updated: 2026/02/04 16:35:25 by matoledo         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:59:18 by matoledo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Contact	CreateContact()
 	lastName = AddValue<std::string>("Introduce tu apellido\n");
 	nickname = AddValue<std::string>("Introduce tu mote\n");
 	darkestSecret = AddValue<std::string>("Introduce tu secreto más oscuro\n");
-	
+
 	Contact contact(phoneNumber, firstName, lastName, nickname, darkestSecret);
 	std::cout << "Contacto añadido al telefono\n";
 	return (contact);

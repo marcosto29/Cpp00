@@ -6,7 +6,7 @@
 /*   By: matoledo <matoledo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:27:42 by matoledo          #+#    #+#             */
-/*   Updated: 2026/02/04 16:35:20 by matoledo         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:17:19 by matoledo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ class PhoneBook
 	private:
 		void	DisplayContact(int index);
 		std::string	WriteWord(std::string string);
-		void	DisplayAllContacts();
+		int		DisplayAllContacts();
 };
